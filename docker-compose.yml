@@ -1,0 +1,9 @@
+services:
+    php-cli:
+        image: 'docker.productsup.com/cde/cde-php-cli-dev:8.3'
+        volumes:
+            - '${HOME}/.composer/:/root/.composer'
+            - './files:/data/productsup'
+            - './:/cde/app'
+        stdin_open: true
+        working_dir: /cde/app
