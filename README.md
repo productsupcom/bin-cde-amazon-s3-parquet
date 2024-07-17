@@ -1,1 +1,1 @@
-# bin-cde-app-skeleton
+# bin-cde-amazon-s3-parquet

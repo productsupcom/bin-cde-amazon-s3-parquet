@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Productsup\BinCdeAppSkeleton;
+namespace Productsup\BinCdeAmazonS3Parquet;
 
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;

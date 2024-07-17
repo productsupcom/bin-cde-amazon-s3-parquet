@@ -6,7 +6,7 @@ services:
         autowire: true
         autoconfigure: true
 
-    Productsup\BinCdeAppSkeleton\:
+    Productsup\BinCdeAmazonS3Parquet\:
         resource: '../src/'
         exclude:
             - '../src/DependencyInjection/'
