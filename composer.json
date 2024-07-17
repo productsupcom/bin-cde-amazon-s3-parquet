@@ -45,12 +45,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Productsup\\BinCdeAppSkeleton\\": "src/"
+            "Productsup\\BinCdeAmazonS3Parquet\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Productsup\\BinCdeAppSkeleton\\Tests\\": "tests/"
+            "Productsup\\BinCdeAmazonS3Parquet\\Tests\\": "tests/"
         }
     },
     "replace": {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Productsup\BinCdeAppSkeleton\Import\Infrastructure\Cli;
+namespace Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\Cli;
 
-use Productsup\BinCdeAppSkeleton\Import\Application\Importer;
+use Productsup\BinCdeAmazonS3Parquet\Import\Application\Importer;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;

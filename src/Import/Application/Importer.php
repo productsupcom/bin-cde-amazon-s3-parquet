@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Productsup\BinCdeAppSkeleton\Import\Application;
+namespace Productsup\BinCdeAmazonS3Parquet\Import\Application;
 
 final class Importer
 {
