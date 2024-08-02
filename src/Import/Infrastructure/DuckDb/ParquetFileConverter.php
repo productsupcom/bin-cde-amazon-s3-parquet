@@ -15,7 +15,7 @@ final readonly class ParquetFileConverter implements FileConverter
 
     public function convert(): void
     {
-        $query = sprintf("duckdb -jsonlines -c \"SELECT * FROM %s\" > out.json", escapeshellarg($this->tempFilename));
+        $query = sprintf('duckdb -jsonlines -c "SELECT * FROM %s" > out.json', escapeshellarg($this->tempFilename));
         $output = exec($query, $output, $resultCode);
 
         if (0 !== $resultCode) {
