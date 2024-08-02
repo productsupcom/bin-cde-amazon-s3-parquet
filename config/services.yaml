@@ -33,7 +33,6 @@ services:
     Productsup\BinCdeAmazonS3Parquet\Import\Application\Importer:
         $converter: '@Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\DuckDb\ParquetFileConverter'
 
-
 when@dev:
     services:
         Productsup\DK\Connector\Application\Feed\OutputFeedForImport: '@Productsup\DK\Connector\Infrastructure\Feed\File\FileOutputFeedForImport'
