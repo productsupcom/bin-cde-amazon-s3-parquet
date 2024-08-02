@@ -1,17 +1,38 @@
 parameters:
     .container.dumper.inline_factories: true
+    temp_filename: 'temp.parquet'
 
 services:
     _defaults:
         autowire: true
         autoconfigure: true
+        bind:
+            $accessKeyId: '%env(ACCESS_KEY_ID)%'
+            $secretAccessKey: '%env(SECRET_ACCESS_KEY)%'
+            $bucket: '%env(BUCKET)%'
+            $region: '%env(REGION)%'
+            $tempFilename: '%temp_filename%'
+            $filename: '%env(FILE_NAME)%'
 
-    Productsup\BinCdeAppSkeleton\:
+    Productsup\BinCdeAmazonS3Parquet\:
         resource: '../src/'
         exclude:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
+
+    AsyncAws\SimpleS3\SimpleS3Client:
+        factory: ['Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\Transporter\Factory\S3ClientFactory', 'make']
+
+    League\Flysystem\FilesystemAdapter:
+        factory: ['Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\Transporter\Factory\S3AdapterFactory', 'make']
+
+    League\Flysystem\Filesystem:
+        factory: ['Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\Transporter\Factory\FilesystemFactory', 'make']
+
+    Productsup\BinCdeAmazonS3Parquet\Import\Application\Importer:
+        $converter: '@Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\DuckDb\ParquetFileConverter'
+
 
 when@dev:
     services:

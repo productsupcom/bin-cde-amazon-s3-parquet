@@ -1,1 +1,0 @@
-# bin-cde-app-skeleton

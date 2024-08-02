@@ -16,6 +16,10 @@
         "php": ">=8.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "async-aws/simple-s3": "^2.1",
+        "league/flysystem": "^3.28",
+        "league/flysystem-async-aws-s3": "^3.28",
+        "league/flysystem-aws-s3-v3": "^3.28",
         "productsupcom/dk-core-bundle": "v0.0.*",
         "productsupcom/lib-dk-testing": "v0.0.*",
         "symfony/console": "7.0.*",
@@ -45,12 +49,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Productsup\\BinCdeAppSkeleton\\": "src/"
+            "Productsup\\BinCdeAmazonS3Parquet\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Productsup\\BinCdeAppSkeleton\\Tests\\": "tests/"
+            "Productsup\\BinCdeAmazonS3Parquet\\Tests\\": "tests/"
         }
     },
     "replace": {
