@@ -20,7 +20,7 @@ final class ImportCommand extends Command
 {
     public function __construct(
         private readonly Importer $importer,
-        string                    $name = null
+        string $name = null
     ) {
         parent::__construct($name);
     }

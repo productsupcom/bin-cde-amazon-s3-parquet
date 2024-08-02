@@ -6,7 +6,7 @@ namespace Productsup\BinCdeAmazonS3Parquet\Import\Application\Logger;
 
 use Stringable;
 
-final readonly class  DownloadStarted implements Stringable
+final readonly class DownloadStarted implements Stringable
 {
     private function __construct(private string $filename)
     {

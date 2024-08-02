@@ -6,7 +6,7 @@ namespace Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\Processor\Excep
 
 use Productsup\DK\Connector\Exception\Core\EngineeringLevelException;
 
-final  class  FileOpenFailException extends EngineeringLevelException
+final class FileOpenFailException extends EngineeringLevelException
 {
     public static function dueToFailedOpen(): self
     {

@@ -12,7 +12,7 @@ use Productsup\DK\Connector\Application\Logger\ConnectorFinished;
 use Productsup\DK\Connector\Application\Logger\ConnectorLogger;
 use Productsup\DK\Connector\Application\Logger\ConnectorStarted;
 
-final readonly class  Importer
+final readonly class Importer
 {
     private const NAME = 'Amazon S3 Parquet Importer';
 
