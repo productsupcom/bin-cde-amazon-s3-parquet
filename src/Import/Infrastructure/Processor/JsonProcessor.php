@@ -14,11 +14,11 @@ final class JsonProcessor implements Processor
 {
     public function processFile(): Generator
     {
-        $fp = @fopen('out.json', 'r');
-        if (false === $fp) {
+        $filePointer = @fopen('out.json', 'r');
+        if (false === $filePointer) {
             throw FileOpenFailException::dueToFailedOpen();
         }
-        while (($buffer = fgets($fp)) !== false) {
+        while (($buffer = fgets($filePointer)) !== false) {
             try {
                 yield json_decode(json: $buffer, associative: true, flags: JSON_THROW_ON_ERROR, );
             } catch (JsonException $e) {
@@ -26,6 +26,6 @@ final class JsonProcessor implements Processor
             }
         }
 
-        fclose($fp);
+        fclose($filePointer);
     }
 }
