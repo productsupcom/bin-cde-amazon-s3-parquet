@@ -19,7 +19,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 final class ImportCommand extends Command
 {
     public function __construct(
-        private Importer $importer,
+        private readonly Importer $importer,
         string $name = null
     ) {
         parent::__construct($name);

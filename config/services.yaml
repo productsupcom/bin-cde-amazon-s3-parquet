@@ -1,10 +1,14 @@
 parameters:
     .container.dumper.inline_factories: true
+    temp_filename: 'temp.parquet'
 
 services:
     _defaults:
         autowire: true
         autoconfigure: true
+        bind:
+            $tempFilename: '%temp_filename%'
+            $filename: '%env(FILE_NAME)%'
 
     Productsup\BinCdeAmazonS3Parquet\:
         resource: '../src/'
@@ -12,6 +16,12 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
+
+    Productsup\BinCdeAmazonS3Parquet\Import\Application\Importer:
+        $converter: '@Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\Converter\ParquetFileConverter'
+
+    aws_client_service:
+        class: 'AsyncAws\S3\S3Client'
 
 when@dev:
     services:
