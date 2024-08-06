@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\Converter;
 
-use Productsup\BinCdeAmazonS3Parquet\Import\Application\DuckDb\ParquetFileConverter as ParquetFileConverterInterface;
-use Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\DuckDb\Exception\FailedQueryExecutionException;
+use Productsup\BinCdeAmazonS3Parquet\Import\Application\Converter\ParquetFileConverter as ParquetFileConverterInterface;
+use Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\Converter\Exception\FailedQueryExecutionException;
 
 final readonly class ParquetFileConverter implements ParquetFileConverterInterface
 {
