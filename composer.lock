@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-
-    "content-hash": "278b4bf9d3bb5e9f4192756588284451",
+    "content-hash": "641c61b2770f2269de728c79b1615dc7",
     "packages": [
         {
             "name": "async-aws/core",
@@ -6028,7 +6027,7 @@
         },
         {
             "name": "symfony/runtime",
-            "version": "v7.0.8",
+            "version": "v7.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/runtime.git",
@@ -6093,7 +6092,7 @@
                 "runtime"
             ],
             "support": {
-                "source": "https://github.com/symfony/runtime/tree/v7.0.8"
+                "source": "https://github.com/symfony/runtime/tree/v7.1.1"
             },
             "funding": [
                 {
