@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Productsup\BinCdeAmazonS3Parquet\Import\Application;
 
+use Productsup\BinCdeAmazonS3Parquet\Import\Application\DuckDb\ParquetFileConverter;
 use Productsup\BinCdeAmazonS3Parquet\Import\Application\Processor\Processor;
 use Productsup\BinCdeAmazonS3Parquet\Import\Application\Transporter\Transporter;
-use Productsup\BinCdeAmazonS3Parquet\Import\Domain\DuckDb\FileConverter;
 use Productsup\DK\Connector\Application\Feed\OutputFeedForImport;
 use Productsup\DK\Connector\Application\Logger\ConnectorFinished;
 use Productsup\DK\Connector\Application\Logger\ConnectorLogger;
@@ -21,7 +21,7 @@ final readonly class Importer
         private ConnectorLogger $logger,
         private OutputFeedForImport $outputFeedForImport,
         private Processor $processor,
-        private FileConverter $converter
+        private ParquetFileConverter $converter
     ) {
     }
 
@@ -34,6 +34,6 @@ final readonly class Importer
             $this->outputFeedForImport->appendToOutputFeed($row);
         }
         $this->outputFeedForImport->end();
-        $this->logger->info(ConnectorFinished::fromName(self::NAME));
+        $this->logger->success(ConnectorFinished::fromName(self::NAME));
     }
 }

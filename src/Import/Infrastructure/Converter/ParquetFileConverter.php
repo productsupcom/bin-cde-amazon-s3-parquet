@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\DuckDb;
+namespace Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\Converter;
 
-use Productsup\BinCdeAmazonS3Parquet\Import\Domain\DuckDb\FileConverter;
+use Productsup\BinCdeAmazonS3Parquet\Import\Application\DuckDb\ParquetFileConverter as ParquetFileConverterInterface;
 use Productsup\BinCdeAmazonS3Parquet\Import\Infrastructure\DuckDb\Exception\FailedQueryExecutionException;
 
-final readonly class ParquetFileConverter implements FileConverter
+final readonly class ParquetFileConverter implements ParquetFileConverterInterface
 {
     public function __construct(private string $tempFilename)
     {
