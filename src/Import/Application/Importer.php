@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Productsup\BinCdeAmazonS3Parquet\Import\Application;
 
-use Productsup\BinCdeAmazonS3Parquet\Import\Application\DuckDb\ParquetFileConverter;
+use Productsup\BinCdeAmazonS3Parquet\Import\Application\Converter\ParquetFileConverter;
 use Productsup\BinCdeAmazonS3Parquet\Import\Application\Processor\Processor;
 use Productsup\BinCdeAmazonS3Parquet\Import\Application\Transporter\Transporter;
 use Productsup\DK\Connector\Application\Feed\OutputFeedForImport;
