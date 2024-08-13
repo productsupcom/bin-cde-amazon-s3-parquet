@@ -15,7 +15,7 @@ final class ParquetFileConverterTest extends TestCase
         $converter->convert();
         $this->assertEquals(file_get_contents(__DIR__.'/fixtures/expected.json'), file_get_contents('out.json'));
         if (0 === strpos(realpath(__DIR__.'/../out.json'), realpath(__DIR__.'/..')) && file_exists(__DIR__.'/../out.json')) {
-            unlink(__DIR__.'/../out.json');
+            unlink(realpath(__DIR__.'/../out.json'));
         }
     }
 
