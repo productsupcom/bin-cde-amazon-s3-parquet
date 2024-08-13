@@ -14,7 +14,7 @@ use Productsup\DK\Connector\Application\Logger\ConnectorStarted;
 
 final readonly class Importer
 {
-    private const NAME = 'Amazon S3 Parquet Importer';
+    public const NAME = 'Amazon S3 Parquet Importer';
 
     public function __construct(
         private Transporter $transporter,
