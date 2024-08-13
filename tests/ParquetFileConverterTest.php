@@ -10,7 +10,7 @@ final class ParquetFileConverterTest extends TestCase
 {
     public function testSuccessfulConversion(): void
     {
-        $tempFilename = (__DIR__.'/fixtures/temp.parquet');
+        $tempFilename = (__DIR__.'/fixtures/test.parquet');
         $converter = new ParquetFileConverter($tempFilename);
         $converter->convert();
         $this->assertEquals(file_get_contents(__DIR__.'/fixtures/expected.json'), file_get_contents('out.json'));
