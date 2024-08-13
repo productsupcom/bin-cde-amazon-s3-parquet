@@ -14,7 +14,9 @@ final class ParquetFileConverterTest extends TestCase
         $converter = new ParquetFileConverter($tempFilename);
         $converter->convert();
         $this->assertEquals(file_get_contents(__DIR__.'/fixtures/expected.json'), file_get_contents('out.json'));
-        unlink((__DIR__.'/../out.json'));
+        if (0 === strpos(realpath(__DIR__.'/../out.json'), realpath(__DIR__.'/..')) && file_exists(__DIR__.'/../out.json')) {
+            unlink(__DIR__.'/../out.json');
+        }
     }
 
     public function testFailedConversionDueToInvalidFile(): void
