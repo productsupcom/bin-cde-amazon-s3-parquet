@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "278b4bf9d3bb5e9f4192756588284451",
+    "content-hash": "7c92fdd875c0330b63a0f5e4fe341292",
     "packages": [
         {
             "name": "async-aws/core",
@@ -6755,16 +6755,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v7.0.8",
+            "version": "v7.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "89bdddd79e918448ce978be664768ef27b9e5798"
+                "reference": "92e080b851c1c655c786a2da77f188f2dccd0f4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/89bdddd79e918448ce978be664768ef27b9e5798",
-                "reference": "89bdddd79e918448ce978be664768ef27b9e5798",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/92e080b851c1c655c786a2da77f188f2dccd0f4b",
+                "reference": "92e080b851c1c655c786a2da77f188f2dccd0f4b",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -6812,7 +6812,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v7.0.8"
+                "source": "https://github.com/symfony/yaml/tree/v7.1.4"
             },
             "funding": [
                 {
@@ -6828,7 +6828,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:55:39+00:00"
+            "time": "2024-08-12T09:59:40+00:00"
         }
     ],
     "packages-dev": [
